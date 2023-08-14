@@ -5,7 +5,7 @@ body {
     background-color: rgb(211, 186, 154);
 
 }
-
+/* styles for header */
 header {
     background-color: rgb(102, 160, 102);
 
@@ -58,7 +58,7 @@ main {
     
 }
 
-
+/* styles for table */
 
 #data-table {
     display: inline-block;

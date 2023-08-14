@@ -36,10 +36,9 @@ module.exports.search = (req, res) =>{
     return false;
 
 }
-
+// filter data by the search
   const data = results.filter(search);
   
-
   return res.render('home',{
     data:data
   });
