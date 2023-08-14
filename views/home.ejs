@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csv Parser</title>
+    <script src="https://kit.fontawesome.com/51457f5ad9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+    <header>
+        <h2 id="header-text">Csv Parser</h2>
+        
+    </header>
+    <main>
+        <div id="main-header">
+            <form action="/search" method="post" id="search-form">
+                <input type="text" name="search" id="search-bar" placeholder="search.." required>
+            </form>
+            <form action="/csv-parse" method="post" enctype="multipart/form-data" id="csv-form">
+                <input type="file" name="csv" id="file" required >
+                    <button>upload file <i class="fa-regular fa-plus"></i></button>
+    
+            </form>
+
+        </div>
+        <div id="data-table">
+        
+            <table border="1">
+                <thead>
+                    <tr>
+                       <% for(let head in data[0]){ %>
+                        <th><%= head %></th>
+                        <% } %>
+                    </tr>   
+                </thead>
+        
+                <tbody>
+                  <% for(obj of data){ %>
+                    <tr>   
+                        <% for(key in obj){ %>
+
+                          <td><%= obj[key] %></td>
+ 
+                            <% } %>
+                    </tr>
+
+
+                    <% } %>
+
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
